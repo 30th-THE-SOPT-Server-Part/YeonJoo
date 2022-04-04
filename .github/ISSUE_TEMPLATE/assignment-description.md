@@ -1,7 +1,7 @@
 ---
 name: Assignment Description
 about: assignment description
-title: "[n주차] 실천/발전 과제"
+title: "[n차 세미나] 실천/발전 과제"
 labels: ''
 assignees: yjooooo
 
