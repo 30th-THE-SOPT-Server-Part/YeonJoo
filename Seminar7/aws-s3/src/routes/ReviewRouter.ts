@@ -6,16 +6,18 @@ import auth from "../middleware/auth";
 const router: Router = Router();
 
 router.post(
-  "/movies/:movieId",
-  [
-    body("title").notEmpty(),
-    body("content").notEmpty(),
-    body("writer").notEmpty(),
-  ],
-  auth,
-  ReviewController.createReview
+    "/movies/:movieId",
+    [
+        body("title").notEmpty(),
+        body("content").notEmpty(),
+        body("writer").notEmpty(),
+    ],
+    auth,
+    ReviewController.createReview
 );
 
 router.get("/movies/:movieId", auth, ReviewController.getReviews);
+
+router.get("/searchmovies/:movieId", ReviewController.getReviewsBySearch);
 
 export default router;
